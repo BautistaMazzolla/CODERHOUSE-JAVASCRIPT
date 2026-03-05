@@ -1,51 +1,63 @@
 // Productos
-const productos = [
-    { nombre: "Remera", precio: 5000 },
-    { nombre: "Pantalón", precio: 8000 },
-    { nombre: "Zapatillas", precio: 15000 }
+const productos= [
+    { 
+    
+    id: 1,
+    nombre: "remera local titular",
+    precio: 40.000,
+
+    },
+
+    {
+    id: 2,
+    nombre: "remera visitante suplente",
+    precio: 35.000,
+    },
+    
+    {
+    id: 3,
+    nombre: "short de futbol local",
+    precio: 20.000
+    },
+
+    {
+    id: 4,
+    nombre: "short de futbol visitante",
+    precio: 20.000,
+    },
+
+    {
+    id: 5,
+    nombre: "buzo de entrenamiento con cierre",
+    precio: 30.000,
+    },
+
+    {
+    id: 6,
+    nombre: "buzo de entrenamiento con capucha",
+    precio: 25.000,
+    },
+    
+    {
+    id: 7,
+    nombre: "buzo de entrenamiento con capucha",
+    precio: 25.000,
+    },
+
+    {
+    id: 8,
+    nombre: "medias largas blancas",
+    precio: 25.000
+    }
 ];
 
-// Mostrar productos
-const mostrarProductos = () => {
-    let mensaje = "Productos disponibles:\n";
+let container_sanlorenzo = document.getElementById("container_sanlorenzo") 
 
-    for (let i = 0; i < productos.length; i++) {
-        mensaje += (i + 1) + " - " + productos[i].nombre +
-        " ($" + productos[i].precio + ")\n";
-    }
-
-    alert(mensaje);
-};
-
-// Elegir producto
-const elegirProducto = () => {
-    return parseInt(prompt("Ingrese el número del producto:"));
-};
-
-// Calcular total
-const calcularTotal = (opcion, cantidad) => {
-    let producto = productos[opcion - 1];
-    return producto.precio * cantidad;
-};
-
-// Programa principal
-mostrarProductos();
-
-let opcion = elegirProducto();
-let cantidad = parseInt(prompt("Ingrese la cantidad:"));
-
-if (opcion >= 1 && opcion <= productos.length && cantidad > 0) {
-    let total = calcularTotal(opcion, cantidad);
-
-    console.log("Producto:", productos[opcion - 1].nombre);
-    console.log("Cantidad:", cantidad);
-    console.log("Total:", total);
-
-    alert(
-        "Producto: " + productos[opcion - 1].nombre +
-        "\nCantidad: " + cantidad +
-        "\nTotal a pagar: $" + total
-    );
-} else {
-    alert("Datos inválidos");
-}
+function renderproductos (productosArray) 
+    productosArray.forEach(productos => {
+        const card  = document.createElement("div")
+        card.innerHTML = <h3>${productos.nombre}</h3> 
+                         <h4>${productos.precio}</h4>
+                         <button class= "productoAgregar" id="${productos.id}">Agregar</button>
+        container_sanlorenzo.appendChild(card)
+    });
