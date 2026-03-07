@@ -1,0 +1,23 @@
+body{
+font-family: Arial;
+text-align: center;
+background-color:#0d1b3d;
+color:white;
+}
+
+.bienvenida{
+margin-top:150px;
+}
+
+img{
+width:500px;
+margin-bottom:20px;
+}
+
+button{
+padding:10px 20px;
+background:#9e1b32;
+color:white;
+border:none;
+cursor:pointer;
+}
