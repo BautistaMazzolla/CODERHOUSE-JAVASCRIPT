@@ -16,6 +16,7 @@ function rendercarrito(cartitems){
         <div class="cart-info">
             <h3>${producto.nombre}</h3>
             <h4>$${producto.precio}</h4>
+            <button class="eliminar" data-id="${producto.id}">Eliminar</button>
         </div>
     </div>
     `
@@ -26,6 +27,31 @@ function rendercarrito(cartitems){
 }
 
 rendercarrito(cartproducts)
+
+function eliminarProducto(){
+
+const botonesEliminar = document.querySelectorAll(".eliminar")
+
+botonesEliminar.forEach(boton => {
+
+    boton.onclick = (e)=>{
+
+        const id = e.currentTarget.dataset.id
+
+        cartproducts = cartproducts.filter(
+            producto => producto.id != id
+        )
+
+        localStorage.setItem("cartproducts", JSON.stringify(cartproducts))
+
+        location.reload()
+    }
+
+})
+
+}
+
+eliminarProducto()
 
 function calcularTotal(cartitems){
     let total = 0
