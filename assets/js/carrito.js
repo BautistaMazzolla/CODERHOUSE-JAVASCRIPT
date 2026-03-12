@@ -89,7 +89,7 @@ Swal.fire({
   title: "¡Compra realizada!",
   text: "Gracias por comprar en la tienda de San Lorenzo",
   icon: "success",
-  imageUrl: "../assets/img/compra.gif",
+  imageUrl: "./assets/img/compra.gif",
   imageWidth: 400,
   confirmButtonText: "Aceptar"
 })
