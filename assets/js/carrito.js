@@ -12,7 +12,7 @@ function rendercarrito(cartitems){
         <img src="${producto.img}" width="80">
         <div class="cart-info">
             <h3>${producto.nombre}</h3>
-            <h4>${$producto.precio}</h4>
+            <h4>$${producto.precio}</h4>
             <button class="eliminar" data-id="${producto.id}">Eliminar</button>
         </div>
     </div>
