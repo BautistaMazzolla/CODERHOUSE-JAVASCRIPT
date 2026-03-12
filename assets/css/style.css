@@ -1,74 +1,42 @@
-#productoscarrito{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.cart-card{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 10px;
-    background: #f5f5f5;
-}
-
-.cart-card img{
-    border-radius: 8px;
-}
-
-.cart-info{
-    flex: 1;
-}
-
-.cart-info h3{
-    font-size: 16px;
-    margin: 0;
-}
-
-.cart-info p{
-    margin: 0;
-    font-weight: bold;
-}
-
-.eliminar{
-    background: red;
-    color: white;
-    border: none;
-    padding: 6px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f2f2f2;
     margin: 0;
-    padding: 0;
     text-align: center;
 }
 
 h1{
     background-color: #1d2f6f;
     color: white;
-    padding: 20px;
+    padding: 15px;
     margin: 0;
 }
 
 #container_sanlorenzo{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    padding: 30px;
+    gap: 20px;
+    padding: 20px;
+}
+
+#container_sanlorenzo div{
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+img{
+    width: 150px;
 }
 
 button{
+    margin-top: 10px;
+    padding: 8px 12px;
     background-color: #c1121f;
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -76,20 +44,33 @@ button:hover{
     background-color: #9d0e18;
 }
 
-img{
-    border-radius: 8px;
+/* carrito */
+
+#productoscarrito{
+    margin-top: 20px;
 }
 
 .cart-card{
     display: flex;
     align-items: center;
-    gap: 15px;
+    justify-content: space-between;
     background: white;
-    padding: 10px;
-    margin: 10px auto;
     width: 400px;
-    border-radius: 8px;
-    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
 }
 
+.cart-card img{
+    width: 70px;
+}
 
+.eliminar{
+    background: red;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
